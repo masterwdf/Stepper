@@ -43,9 +43,14 @@ public class MainActivity extends AppCompatActivity {
 
         List<Fragment> listaFragment = new ArrayList<>();
 
-        int count = 1;
+        //int count = 1;
 
         for (String value : data) {
+            SliderCardFragment cardFragment = new SliderCardFragment();
+            cardFragment.setTitle(value);
+            listaFragment.add(cardFragment);
+
+            /*
             switch (count) {
                 case 2:
                     SliderCardFragment2 cardFragment2 = new SliderCardFragment2();
@@ -60,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             count++;
+            */
         }
 
         SliderAdapter adapterSlider = new SliderAdapter(getSupportFragmentManager(), listaFragment);
